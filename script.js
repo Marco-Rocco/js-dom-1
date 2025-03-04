@@ -1,12 +1,26 @@
-const onOff = document.getElementById('switch')
-console.log(onOff)
+const lampSwitch = document.getElementById('switch');
+console.log(lampSwitch);
 
-const lamp = document.getElementById('lamp-img')
-console.log(lamp)
-lamp.src = 'img/white_lamp.png'
+const lamp = document.getElementById('lamp-img');
+console.log(lamp);
+lamp.src = 'img/white_lamp.png';
 
-onOff.addEventListener ('click',
+let onOff = 0; 
+
+lampSwitch.addEventListener ('click',
     function() {
+        if (onOff < 1){
+
         lamp.src = 'img/yellow_lamp.png'
+        console.log('ho acceso la lampadina')
+        
+        return onOff ++
+        };
+
+        lamp.src = 'img/white_lamp.png'
+        console.log('ho spento la lampadina')
+
+        return onOff --
+        
     }
-)
+);
