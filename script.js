@@ -14,11 +14,16 @@ lampSwitch.addEventListener ('click',
         lamp.src = 'img/yellow_lamp.png'
         console.log('ho acceso la lampadina')
         
+        lampSwitch.innerHTML = 'spegni la lampadina'
+
+
         return onOff ++
         };
 
         lamp.src = 'img/white_lamp.png'
         console.log('ho spento la lampadina')
+
+        lampSwitch.innerHTML = 'accendi la lampadina'
 
         return onOff --
         
